@@ -26,7 +26,7 @@ public class LoginTest extends BaseSelenium {
 public void verifyLoginSuccessfull(String strUserName, String strPassword) 
 {
 	LoginPage lp=new LoginPage();
-	lp.loginSuccess(strUserName, strPassword);
+	lp.loginSuccessDP(strUserName, strPassword);
 	}
 
 //To verify login with Invalid credentials
@@ -36,16 +36,39 @@ public void verifyLoginInvalidData(String strUserName, String strPassword) {
 	lp1.loginInvalid(strUserName, strPassword);
 	}
 
+//To verify broken links
 @Test (priority=3)
 public void verifyBrokenLinks() throws MalformedURLException, IOException {
 	LoginPage lp=new LoginPage();
 	lp.brokenLinksVerify();
 	}
  
+//To verify Social Media Link
 @Test (priority=3)
 public void verifySocialMedialink()
 {
 	LoginPage lp=new LoginPage();
 	lp.verifyAllLinks();
 }
+
+@Test
+public void verifyFieldsLength()
+{
+	LoginPage lp=new LoginPage();
+	lp.verifyFieldsLength();			
+}
+
+@Test
+public void takeScreenShot()
+{
+	LoginPage lp=new LoginPage();
+//	lp.takeScreenshot();
+}
+@Test
+public void test()
+{
+	LoginPage lp=new LoginPage();
+	lp.test();
+}
+
 }
